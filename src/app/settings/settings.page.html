@@ -1,0 +1,48 @@
+<ion-content class="background">
+
+  <ion-title>Settings</ion-title>
+
+  <ion-icon class="profileicon" name="person-circle-outline" size="large"></ion-icon>
+
+  <div>
+    <ion-chip color="danger" class="logoutbtn" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <ion-label>Sign Out</ion-label>
+    </ion-chip>
+  </div>
+
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="music">
+        <ion-label>Home</ion-label>
+        <ion-icon name="home-outline" size="large"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Meditation</ion-label>
+        <ion-icon name="moon-outline" size="large"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Music</ion-label>
+        <ion-icon name="musical-notes-outline" size="large"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Settings</ion-label>
+        <ion-icon name="settings-outline" size="large" ></ion-icon>
+      </ion-tab-button>
+      
+    </ion-tab-bar>
+  
+  </ion-tabs>
+
+
+  <style>
+    ion-label, ion-icon, ion-title{
+      color: white;
+    }
+  </style>
+
+</ion-content>

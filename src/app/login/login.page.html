@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/medidation login.jpg" alt="Meditation-logo">
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Smiling Mind</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+<form method="POST" action="#">
+      <ion-item>
+        <ion-input placeholder="Username" name="username"></ion-input>
+      </ion-item>
+
+      <br>
+
+      <ion-item>
+        <ion-input placeholder="Password" type="password" name="password"></ion-input>
+      </ion-item>
+
+      <br>
+    </form>
+      <form>
+    
+        <ion-row>
+          <ion-col>
+            <ion-button class="loginbtn" type="submit" color="danger" expand="block" (click)= "logMeIn()">Login</ion-button>
+            <br>
+            
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </form>
+
+    
+    </ion-card-content>
+  </ion-card>
+
+ <style>
+ion-card-title, a, ion-input{
+  color: #FFFFFF;
+}
+ </style>
+
+</ion-content>

@@ -1,0 +1,87 @@
+<ion-content class="background">
+<ion-toolbar>
+  <ion-title>Good morning dear</ion-title>
+  <br>
+  <ion-title size="small">We wish you have a good day!</ion-title>
+  <br>
+  <ion-searchbar></ion-searchbar>
+</ion-toolbar>
+
+<div class="homebuttons">
+  <ion-chip color="danger" class="sleepbtn">
+    <ion-icon name="bed-outline"></ion-icon>
+    <ion-label>Sweet Sleep</ion-label>
+  </ion-chip>
+
+  <ion-chip color="warning" class="insomniabtn">
+    <ion-icon name="medkit-outline"></ion-icon>
+    <ion-label>Insomnia</ion-label>
+  </ion-chip>
+
+  <ion-chip color="primary" class="depressionbtn">
+    <ion-icon name="sad-outline"></ion-icon>
+    <ion-label>Depression</ion-label>
+  </ion-chip>
+
+</div>
+
+<ion-chip class="dailythoughtbtn">
+  <ion-label>Daily Thought<br><br>Meditation: 3-10 minutes</ion-label>
+</ion-chip>
+
+<ion-toolbar>
+  <ion-title>Featured</ion-title>
+</ion-toolbar>
+
+<ion-chip class="sleepmeditation">
+  <ion-label>Sleep meditation</ion-label>
+  <ion-icon name="arrow-forward-outline" size="large" (click)="goMeditation()"></ion-icon>
+</ion-chip>
+
+<ion-chip class="sleepingtips">
+  <ion-label>Tips for sleeping</ion-label>
+  <ion-icon name="reader-outline" size="large"></ion-icon> <!--add click function-->
+</ion-chip>
+
+<ion-chip class="calmingsounds">
+  <ion-label>Calming sounds</ion-label>
+  <ion-icon name="play-circle-outline" size="large"></ion-icon>  <!--add click function-->
+</ion-chip>
+
+
+
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="music">
+      <ion-label>Home</ion-label>
+      <ion-icon name="home-outline" size="large" (click)="goHome()"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="music">
+      <ion-label>Meditation</ion-label>
+      <ion-icon name="moon-outline" size="large" (click)="goMeditation()"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="music">
+      <ion-label>Music</ion-label>
+      <ion-icon name="musical-notes-outline" size="large" ></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="music">
+      <ion-label>Settings</ion-label>
+      <ion-icon name="settings-outline" size="large" ></ion-icon>
+    </ion-tab-button>
+    
+  </ion-tab-bar>
+
+</ion-tabs>
+
+
+<style>
+  ion-title, ion-label, ion-searchbar, ion-icon{
+    color: white;
+  }
+</style>
+</ion-content>
