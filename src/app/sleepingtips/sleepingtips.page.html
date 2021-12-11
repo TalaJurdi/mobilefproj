@@ -1,0 +1,72 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>sleepingtips</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content padding class="background">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sleeping Tips</ion-card-title>
+      <img src="assets/sleep.jpg" alt="Sleep">
+      <ion-card-subtitle></ion-card-subtitle>
+
+    </ion-card-header>
+  </ion-card>
+
+  <ion-text class="texttips" color="danger">
+    Meditation may help you sleep better. As a relaxation technique, it can quiet the mind and body while enhancing
+    inner peace. When done before bedtime, meditation may help reduce insomnia and sleep troubles by promoting overall
+    calmness. Now listen to the audio in order to relax and sleep well.
+  </ion-text>
+<br>
+  <!-- <div>
+    <ion-button class="backbtn" size="large" (onclick)="backtohome()">Back</ion-button>
+
+  </div> -->
+
+  <ion-card>
+    <ion-card-header>Audio Files</ion-card-header>
+
+    <ion-card-content>
+      <audio src="/assets/relax1.mp3" controls></audio>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <ion-tabs>
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="music">
+          <ion-label>Home</ion-label>
+          <ion-icon name="home-outline" size="large"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="music">
+          <ion-label>Meditation</ion-label>
+          <ion-icon name="moon-outline" size="large"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="music">
+          <ion-label>Music</ion-label>
+          <ion-icon name="musical-notes-outline" size="large"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="music">
+          <ion-label>Settings</ion-label>
+          <ion-icon name="settings-outline" size="large" ></ion-icon>
+        </ion-tab-button>
+        
+      </ion-tab-bar>
+    
+    </ion-tabs>
+  
+  </div>
+  
+  <style>
+    ion-card-title, ion-text, ion-icon{
+      color:white;
+    }
+  </style>
+</ion-content>

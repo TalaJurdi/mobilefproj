@@ -1,72 +1,107 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Smiling Mind</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  
-    <ion-card-header>
 
-      <ion-card-title>Smiling Mind</ion-card-title>
-      <br>
-      <br>
-      <img src="assets/meditation2.jpg" alt="Meditation-logo">
-      <ion-card-subtitle></ion-card-subtitle>
-      
-    </ion-card-header>
+  <ion-card-header>
 
-    <ion-card-content>
-      The thing about meditation is: you.
-      You become more and more you.
-    </ion-card-content>
+    <ion-card-title>Smiling Mind</ion-card-title>
+    <br>
+    <br>
+    <img src="assets/meditation2.jpg" alt="Meditation-logo">
+    <ion-card-subtitle></ion-card-subtitle>
+
+  </ion-card-header>
+
+  <ion-card-content>
+    The thing about meditation is: you.
+    You become more and more you.
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-button class="loginbtn" type="submit" color="danger" expand="block" (click)="logMeIn()">Login</ion-button>
+      <br>
+      <ion-button class="signupbtn" type="submit" color="danger" expand="block" (click)="formRegister()">Sign Up
+      </ion-button>
+
+    </ion-col>
+  </ion-row>
+  <!-- <ion-button class="loginbtn" type="submit" color="danger" expand="block" (click)= "logMeIn()">Login</ion-button> -->
+
+  <!-- <form>
 
     <ion-row>
       <ion-col>
         <ion-button class="loginbtn" type="submit" color="danger" expand="block" (click)="logMeIn()">Login</ion-button>
         <br>
-        <ion-button class="signupbtn" type="submit" color="danger" expand="block" (click)="formRegister()">Sign Up</ion-button>
-
       </ion-col>
     </ion-row>
-  
+  </form> -->
+
+
+  <!-- <ion-card-content>
+    <form method="POST" action="#">
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="loginbtn" type="submit" color="danger" expand="block" (click)="logMeIn()">Login
+          </ion-button>
+          <br>
+        </ion-col>
+      </ion-row>
+    </form>
+
+
+  </ion-card-content> -->
+
+
+
 
   <ion-tabs>
 
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="music"> <!--check what does it mean-->
+      <ion-tab-button tab="music">
+        <!--check what does it mean-->
         <ion-label>Home</ion-label>
         <ion-icon name="home-outline" size="large"></ion-icon>
       </ion-tab-button>
-  
+
       <ion-tab-button tab="music">
         <ion-label>Meditation</ion-label>
         <ion-icon name="moon-outline" size="large"></ion-icon>
       </ion-tab-button>
-  
+
       <ion-tab-button tab="music">
         <ion-label>Music</ion-label>
         <ion-icon name="musical-notes-outline" size="large"></ion-icon>
       </ion-tab-button>
-  
+
       <ion-tab-button tab="music">
         <ion-label>Settings</ion-label>
-        <ion-icon name="settings-outline" size="large" ></ion-icon>
+        <ion-icon name="settings-outline" size="large"></ion-icon>
       </ion-tab-button>
-      
+
     </ion-tab-bar>
-  
+
   </ion-tabs>
 
   <style>
-    ion-card-content, ion-card-title, ion-icon, ion-label{
+    ion-card-content,
+    ion-card-title,
+    ion-icon,
+    ion-label {
       color: white;
     }
   </style>
 
-  
 
-    
-  
+
+
+
 
 </ion-content>

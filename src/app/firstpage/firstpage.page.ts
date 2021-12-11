@@ -7,18 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./firstpage.page.scss'],
 })
 export class FirstpagePage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  formRegister() {
+    this.router.navigate(['/register']);
   }
 
   logMeIn(){
     this.router.navigate(['/home']);
   }
-
-  formRegister(){
-    this.router.navigate(['/register']);
-  }
-
 }

@@ -2,12 +2,26 @@ ion-content{
     --ion-background-color: #0C0053;
 }
 img{
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 .loginbtn, .signupbtn{
-    margin-left: 110px;
+    margin-left: 75px;
     margin-right: 20px;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
+}
+
+ion-card-title{
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 50px;
+}
+
+ion-card-content{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { StreamingMedia } from '@ionic-native/streaming-media';
+
+
 
 const routes: Routes = [
   {
@@ -29,8 +30,8 @@ const routes: Routes = [
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
   {
-    path: 'media',
-    loadChildren: () => import('./media/media.module').then( m => m.MediaPageModule)
+    path: 'sleepingtips',
+    loadChildren: () => import('./sleepingtips/sleepingtips.module').then( m => m.SleepingtipsPageModule)
   },
 ];
 

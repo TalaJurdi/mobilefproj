@@ -1,38 +1,45 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Sign Up</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <form>
+
+  <ion-card>
+    
+      <ion-card-title>Sign Up Form</ion-card-title>
+    
+  </ion-card>
+
+  <form class="form" [formGroup]="validationsform" (ngSubmit)="tryRegister(validationsform.value)">
     <ion-item lines="full">
       <ion-label position="floating">First name</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required [(ngModel)]="fullname"></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Last name</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required [(ngModel)]="lastname"></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required [(ngModel)]="email"></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" required [(ngModel)]="password"></ion-input>
     </ion-item>
 
     <br>
@@ -46,13 +53,40 @@
 
     <ion-row>
       <ion-col>
-        <ion-button class="registerbtn" type="submit" color="danger" expand="block">Register</ion-button>
+        <ion-button class="registerbtn" type="submit" color="danger" expand="block" (click)="register()">Register</ion-button>
       </ion-col>
     </ion-row>
   </form>
 
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="music">
+        <ion-label>Home</ion-label>
+        <ion-icon name="home-outline" size="large" (click)="goHome()"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Meditation</ion-label>
+        <ion-icon name="moon-outline" size="large" (click)="goMeditation()"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Music</ion-label>
+        <ion-icon name="musical-notes-outline" size="large" ></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="music">
+        <ion-label>Settings</ion-label>
+        <ion-icon name="settings-outline" size="large" ></ion-icon>
+      </ion-tab-button>
+      
+    </ion-tab-bar>
+  
+  </ion-tabs>
+
   <style>
-    ion-item{
+    ion-item, ion-card-title, ion-label, ion-icon {
       color: white;
     }
   </style>

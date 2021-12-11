@@ -17,5 +17,7 @@ export class HomePage {
   goMeditation(){
     this.router.navigate(['/media']);
   }
-
+  btnClicked(){
+    this.router.navigate(['meditation/']);
+  }
 }

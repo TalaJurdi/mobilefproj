@@ -8,13 +8,21 @@ import { Router } from '@angular/router';
 })
 export class SettingsPage implements OnInit {
 
+  audio: any;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.audio = new Audio();
+    this.audio.src = './assets/relax1.mp3';
+    // this.audio = load();
+
   }
 
   logout(){
-    this.router.navigate(['/hoem']);
+    this.router.navigate(['/home']);
 
   }
 }
+
+
