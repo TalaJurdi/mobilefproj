@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-// import { AuthenticationService } from '../services/authentication.service';
-// import { NavController } from '@ionic/angular';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AuthenticationService } from '../services/authentication.service';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 // import firebase from 'firebase/compat/app';
 // import 'firebase/compat/auth';
 
@@ -13,41 +14,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
-  // validationsform: FormGroup;
-  // errorMessage = '';
-  // successMessage = '';
+  // firstname: string;
+  // lastname: string;
+  username: string;
+  password: string;
 
-  // validationmessages = {
-  //   email: [
-  //     { type: 'required', message: 'Email is required.' },
-  //     { type: 'pattern', message: 'Enter a valid email.' }
-  //   ],
-  //   password: [
-  //     { type: 'required', message: 'Password is required.' },
-  //     { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-  //   ]
-  // };
+  validationsform: FormGroup;
+  errorMessage = '';
+  successMessage = '';
+
+  validationmessages = {
+    email: [
+      { type: 'required', message: 'Email is required.' },
+      { type: 'pattern', message: 'Enter a valid email.' }
+    ],
+    password: [
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+    ]
+  };
 
 
   constructor(
-    // private navCtrl: NavController,
-    // private authService: AuthenticationService,
-    // private formBuilder: FormBuilder
+    private router: Router,
+    private navCtrl: NavController,
+    private authService: AuthenticationService,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
-
-    // this.validationsform = this.formBuilder.group({
-    //   email: new FormControl('', Validators.compose([
-    //     Validators.required,
-    //     Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-    //   ])),
-    //   password: new FormControl('', Validators.compose([
-    //     Validators.minLength(5),
-    //     Validators.required
-    //   ])),
-    // });
-  // }
+    this.validationsform = this.formBuilder.group({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(5),
+        Validators.required
+      ])),
+    });
+  }
 
   // tryRegister(value) {
   //   this.authService.registerUser(value)
@@ -61,7 +67,10 @@ export class RegisterPage implements OnInit {
   //       this.successMessage = '';
   //     });
   // }
-
+register(){
+  this.router.navigate(['/home']);
+}
 
 }
-}
+
+

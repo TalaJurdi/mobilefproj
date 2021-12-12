@@ -18,28 +18,28 @@
   <form class="form" [formGroup]="validationsform" (ngSubmit)="tryRegister(validationsform.value)">
     <ion-item lines="full">
       <ion-label position="floating">First name</ion-label>
-      <ion-input type="text" required [(ngModel)]="fullname"></ion-input>
+      <ion-input type="text" name="firstname" ></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Last name</ion-label>
-      <ion-input type="text" required [(ngModel)]="lastname"></ion-input>
+      <ion-input type="text" name="lastname" required></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required [(ngModel)]="email"></ion-input>
+      <ion-input type="text"  placeholder="Email" name="email" formControlName="email"></ion-input>
     </ion-item>
 
     <br>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required [(ngModel)]="password"></ion-input>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
     </ion-item>
 
     <br>
