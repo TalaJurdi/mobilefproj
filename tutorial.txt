@@ -1,0 +1,5 @@
+How to run my project:
+-open command prompt
+-cd into the project
+-then ionic serve 
+-it will automatically direct you to the browser with the project running using a specific port number
